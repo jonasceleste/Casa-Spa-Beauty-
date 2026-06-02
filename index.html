@@ -1,0 +1,1520 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Casa Spa Beauty | Tatiana Ribeiro | Três Lagoas - MS</title>
+  <meta name="description" content="Casa Spa Beauty - Tatiana Ribeiro. Maquiadora e cabeleireira em Três Lagoas - MS. Um espaço sofisticado para maquiagem, corte, escova e penteados com atendimento acolhedor e agendamento pelo WhatsApp." />
+  <style>
+    :root {
+      --bg: #fff1f4;
+      --bg-2: #fde6dc;
+      --surface: rgba(255,255,255,0.76);
+      --surface-strong: rgba(255,255,255,0.90);
+      --text: #2f1b1d;
+      --muted: #7a5556;
+      --line: rgba(154, 84, 76, 0.16);
+      --primary: #b55c72;
+      --primary-2: #e08b72;
+      --accent: #f0b89a;
+      --gold: #d29b45;
+      --shadow: 0 30px 70px rgba(120, 52, 64, 0.14);
+      --radius-xl: 34px;
+      --radius-lg: 24px;
+      --radius-md: 18px;
+      --max: 1180px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      color: var(--text);
+      font-family: "Georgia", "Times New Roman", serif;
+      background:
+        radial-gradient(circle at top left, rgba(229, 126, 150, 0.22), transparent 30%),
+        radial-gradient(circle at right 20%, rgba(240, 184, 154, 0.24), transparent 24%),
+        radial-gradient(circle at bottom left, rgba(224, 139, 114, 0.16), transparent 28%),
+        linear-gradient(180deg, #fff8fa 0%, #fff0ea 100%);
+      line-height: 1.6;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+
+    .container {
+      width: min(calc(100% - 32px), var(--max));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      position: relative;
+      backdrop-filter: blur(18px);
+      background: rgba(251, 247, 244, 0.75);
+      border-bottom: 1px solid rgba(95,57,45,0.08);
+    }
+
+    .nav {
+      position: relative;
+      min-height: 96px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      min-width: 0;
+      margin: 0 auto;
+    }
+
+    /* ── Logo elegant entrance ── */
+    @keyframes logoReveal {
+      0% {
+        opacity: 0;
+        transform: translateY(-10px) scale(0.92);
+        filter: blur(6px) drop-shadow(0 0 0px rgba(210, 155, 69, 0));
+      }
+      60% {
+        opacity: 1;
+        transform: translateY(2px) scale(1.03);
+        filter: blur(0px) drop-shadow(0 0 18px rgba(210, 155, 69, 0.55));
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        filter: blur(0px) drop-shadow(0 0 8px rgba(210, 155, 69, 0.28));
+      }
+    }
+
+    @keyframes logoGlowPulse {
+      0%, 100% {
+        filter: drop-shadow(0 0 7px rgba(210, 155, 69, 0.22)) drop-shadow(0 2px 14px rgba(181, 92, 114, 0.18));
+      }
+      50% {
+        filter: drop-shadow(0 0 18px rgba(210, 155, 69, 0.48)) drop-shadow(0 4px 22px rgba(181, 92, 114, 0.30));
+      }
+    }
+
+    .brand-logo {
+      display: block;
+      height: 58px;
+      width: auto;
+      max-width: min(100%, 360px);
+      animation:
+        logoReveal 1.1s cubic-bezier(0.22, 1, 0.36, 1) both,
+        logoGlowPulse 3.8s ease-in-out 1.2s infinite;
+      will-change: transform, filter, opacity;
+      transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), filter 0.4s ease;
+    }
+
+    .brand-logo:hover {
+      transform: scale(1.06);
+      filter: drop-shadow(0 0 24px rgba(210, 155, 69, 0.60)) drop-shadow(0 4px 28px rgba(181, 92, 114, 0.36));
+      transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), filter 0.4s ease;
+      animation-play-state: paused;
+    }
+
+    .brand-copy strong {
+      display: block;
+      font-size: 1.05rem;
+      letter-spacing: 0.02em;
+      font-weight: 700;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .brand-copy span {
+      display: block;
+      color: var(--muted);
+      font-size: 0.9rem;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .menu {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .menu a.link {
+      color: var(--muted);
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .menu a.link:hover { color: var(--primary); }
+
+    .btn {
+      border: 0;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      border-radius: 999px;
+      padding: 15px 22px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 700;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+      cursor: pointer;
+    }
+
+    .btn:hover { transform: translateY(-2px); }
+
+    .btn-primary {
+      color: #fff;
+      background: linear-gradient(135deg, #b24d6c, #e08469 82%);
+      box-shadow: 0 18px 34px rgba(181, 92, 114, 0.28);
+    }
+
+    .btn-secondary {
+      background: rgba(255,255,255,0.75);
+      color: var(--primary);
+      border: 1px solid var(--line);
+      box-shadow: 0 12px 24px rgba(70,38,30,0.08);
+    }
+
+    .social-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .social-btn {
+      min-width: 170px;
+    }
+
+    .social-icon {
+      width: 18px;
+      height: 18px;
+      display: inline-block;
+      flex: 0 0 auto;
+    }
+
+    .wa-icon {
+      color: #25D366;
+    }
+
+    .instagram-box {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 20px;
+      align-items: stretch;
+      padding: 28px;
+      border-radius: 30px;
+      background: linear-gradient(135deg, rgba(255,255,255,0.84), rgba(255,247,244,0.78));
+      border: 1px solid var(--line);
+      box-shadow: 0 18px 40px rgba(70,38,30,0.07);
+    }
+
+    .instagram-feature {
+      border-radius: 26px;
+      padding: 28px;
+      color: #fff8f4;
+      background: linear-gradient(135deg, #8f4254 0%, #c85f7d 54%, #ea8c65 100%);
+      box-shadow: 0 22px 48px rgba(143,66,84,0.20);
+    }
+
+    .instagram-feature p {
+      color: rgba(255,248,244,0.88);
+      margin: 0 0 14px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .instagram-feature h3 {
+      margin: 0 0 12px;
+      font-size: clamp(1.7rem, 4vw, 2.5rem);
+      line-height: 1.06;
+    }
+
+    .instagram-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+
+    .instagram-item {
+      border-radius: 20px;
+      padding: 18px;
+      background: rgba(255,255,255,0.82);
+      border: 1px solid rgba(181,92,114,0.12);
+      box-shadow: 0 12px 26px rgba(70,38,30,0.05);
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .instagram-item strong {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--primary);
+      font-size: 1rem;
+    }
+
+    .instagram-item span {
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .hero {
+      padding: 46px 0 32px;
+    }
+
+    .hero-shell {
+      border-radius: 42px;
+      overflow: hidden;
+      background:
+        linear-gradient(135deg, rgba(255,255,255,0.72), rgba(255,255,255,0.52)),
+        linear-gradient(135deg, #fff1f2 0%, #ffe0d5 52%, #ffd8c7 100%);
+      border: 1px solid rgba(181,92,114,0.14);
+      box-shadow: var(--shadow);
+      position: relative;
+      isolation: isolate;
+    }
+
+    .hero-shell::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 12% 18%, rgba(224,139,114,0.20), transparent 18%),
+        radial-gradient(circle at 88% 24%, rgba(229,126,150,0.24), transparent 18%),
+        radial-gradient(circle at 78% 80%, rgba(181,92,114,0.14), transparent 22%);
+      z-index: -1;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 34px;
+      padding: 56px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 9px 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.8);
+      border: 1px solid rgba(210,155,69,0.26);
+      color: #a05c30;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 18px 0 18px;
+      font-size: clamp(2.5rem, 6vw, 5rem);
+      line-height: 0.98;
+      letter-spacing: -0.04em;
+      font-weight: 700;
+    }
+
+    .hero-copy p {
+      margin: 0 0 16px;
+      color: var(--muted);
+      font-size: 1.08rem;
+      max-width: 60ch;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin: 28px 0 22px;
+    }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .stat {
+      background: rgba(255,255,255,0.74);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 16px;
+      box-shadow: 0 12px 28px rgba(70,38,30,0.05);
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 1.4rem;
+      line-height: 1;
+      color: var(--primary);
+      margin-bottom: 6px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .stat span {
+      color: var(--muted);
+      font-size: 0.92rem;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .hero-card {
+      padding: 24px;
+      border-radius: 30px;
+      background:
+        linear-gradient(180deg, rgba(113, 49, 66, 0.94), rgba(176, 90, 112, 0.90) 58%, rgba(224, 139, 114, 0.86));
+      color: #fff4ef;
+      box-shadow: 0 30px 60px rgba(143, 66, 84, 0.26);
+      position: relative;
+      overflow: hidden;
+      min-height: 520px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      width: 240px;
+      height: 240px;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 50%;
+      right: -40px;
+      top: -30px;
+    }
+
+    .hero-card::after {
+      content: "";
+      position: absolute;
+      inset: auto 22px 22px auto;
+      width: 118px;
+      height: 118px;
+      border-radius: 24px;
+      background: linear-gradient(135deg, rgba(216,181,156,0.24), rgba(255,255,255,0.04));
+      filter: blur(2px);
+    }
+
+    .mini-label {
+      font-family: Arial, Helvetica, sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 0.78rem;
+      color: rgba(255,241,231,0.76);
+    }
+
+    .hero-card h2 {
+      margin: 12px 0 10px;
+      font-size: 2rem;
+      line-height: 1.08;
+      font-weight: 700;
+    }
+
+    .hero-card p,
+    .hero-card li,
+    .hero-card a {
+      color: rgba(255,241,231,0.84);
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .luxury-line {
+      width: 78px;
+      height: 2px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--accent), rgba(255,255,255,0.2));
+      margin: 16px 0 20px;
+    }
+
+    .feature-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 14px;
+    }
+
+    .feature-list li {
+      padding-left: 18px;
+      position: relative;
+    }
+
+    .feature-list li::before {
+      content: "✦";
+      position: absolute;
+      left: 0;
+      color: #dfbd8d;
+    }
+
+    section {
+      padding: 34px 0;
+    }
+
+    .section-head {
+      margin-bottom: 24px;
+    }
+
+    .section-head .tag {
+      display: inline-block;
+      margin-bottom: 8px;
+      color: #8a6a3f;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .section-head h2 {
+      margin: 0;
+      font-size: clamp(1.9rem, 4vw, 3.2rem);
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+    }
+
+    .section-head p {
+      margin: 12px 0 0;
+      max-width: 64ch;
+      color: var(--muted);
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .glass {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      box-shadow: 0 18px 36px rgba(70,38,30,0.06);
+      backdrop-filter: blur(8px);
+    }
+
+    .glass h3 {
+      margin: 0 0 10px;
+      font-size: 1.18rem;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .glass p,
+    .glass li,
+    .glass span,
+    .glass a {
+      color: var(--muted);
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .signature-box {
+      min-height: 100%;
+      background:
+        linear-gradient(135deg, rgba(181,92,114,0.96), rgba(224,139,114,0.90));
+      color: #fff9f4;
+      border-radius: var(--radius-xl);
+      padding: 28px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 28px 58px rgba(181,92,114,0.20);
+    }
+
+    .signature-box::before {
+      content: "";
+      position: absolute;
+      inset: auto -40px -40px auto;
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,0.16);
+    }
+
+    .signature-box .tagline {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.85rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255,249,244,0.78);
+    }
+
+    .signature-box h3 {
+      margin: 12px 0 12px;
+      font-size: 2rem;
+      line-height: 1.1;
+    }
+
+    .signature-box p {
+      margin: 0 0 18px;
+      color: rgba(255,249,244,0.86);
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .quote {
+      padding: 18px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.14);
+      border: 1px solid rgba(255,255,255,0.18);
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .service {
+      padding: 22px;
+      border-radius: 24px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.86), rgba(255,255,255,0.68));
+      border: 1px solid var(--line);
+      box-shadow: 0 18px 34px rgba(70,38,30,0.06);
+    }
+
+    .service .icon {
+      width: 46px;
+      height: 46px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, rgba(240,184,154,0.55), rgba(181,92,114,0.18));
+      color: var(--primary);
+      font-size: 1.2rem;
+      margin-bottom: 14px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .service h3 {
+      margin: 0 0 8px;
+      font-size: 1.12rem;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .service p {
+      margin: 0;
+      color: var(--muted);
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .gallery-item {
+      overflow: hidden;
+      border-radius: 28px;
+      background: rgba(255,255,255,0.78);
+      border: 1px solid var(--line);
+      box-shadow: 0 20px 40px rgba(70,38,30,0.08);
+    }
+
+    .gallery-item.featured-gallery {
+      grid-column: 1 / -1;
+    }
+
+    .gallery-photo {
+      position: relative;
+      aspect-ratio: 4 / 3;
+      overflow: hidden;
+      background: linear-gradient(135deg, #ffd9cb, #ef9b80 54%, #cf6f83 100%);
+    }
+
+    .gallery-photo.multi {
+      height: 380px;
+      aspect-ratio: auto;
+    }
+
+    .gallery-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .ambient-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 6px;
+      width: 100%;
+      height: 100%;
+    }
+
+    .ambient-grid img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .gallery-badge {
+      position: absolute;
+      left: 16px;
+      top: 16px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(255, 247, 240, 0.92);
+      color: #a54d67;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      border: 1px solid rgba(181,92,114,0.12);
+      box-shadow: 0 10px 20px rgba(181,92,114,0.12);
+    }
+
+    .gallery-content {
+      padding: 20px;
+    }
+
+    .gallery-content h3 {
+      margin: 0 0 8px;
+      font-size: 1.08rem;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .gallery-content p {
+      margin: 0 0 14px;
+      color: var(--muted);
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    /* ── Filtros da galeria ── */
+    .gallery-filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 28px;
+      justify-content: center;
+    }
+
+    .filter-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 11px 20px;
+      border-radius: 999px;
+      border: 1.5px solid rgba(181,92,114,0.22);
+      background: rgba(255,255,255,0.82);
+      color: var(--muted);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.88rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      cursor: pointer;
+      transition: all 0.28s cubic-bezier(0.22,1,0.36,1);
+      box-shadow: 0 6px 18px rgba(70,38,30,0.06);
+      text-transform: uppercase;
+      user-select: none;
+      backdrop-filter: blur(8px);
+    }
+
+    .filter-btn .filter-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      flex-shrink: 0;
+      transition: transform 0.28s ease;
+    }
+
+    .filter-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 28px rgba(181,92,114,0.18);
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+
+    .filter-btn.active {
+      background: linear-gradient(135deg, #b24d6c, #e08469 82%);
+      color: #fff;
+      border-color: transparent;
+      box-shadow: 0 14px 32px rgba(181,92,114,0.32);
+      transform: translateY(-2px);
+    }
+
+    .filter-btn.active .filter-dot {
+      background: rgba(255,255,255,0.9) !important;
+      transform: scale(1.3);
+    }
+
+    /* Cores dos dots por categoria */
+    .dot-ambiente  { background: #b55c72; }
+    .dot-make      { background: #e08b72; }
+    .dot-penteados { background: #d29b45; }
+    .dot-resultado { background: #8f4254; }
+    .dot-todos     { background: linear-gradient(135deg, #b55c72, #d29b45); }
+
+    .real-photo-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+
+    .real-photo-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 24px;
+      background: rgba(255,255,255,0.82);
+      border: 1px solid var(--line);
+      box-shadow: 0 16px 34px rgba(70,38,30,0.08);
+      transition: opacity 0.38s ease, transform 0.38s cubic-bezier(0.22,1,0.36,1);
+    }
+
+    .real-photo-card.hidden {
+      display: none;
+    }
+
+    .real-photo {
+      position: relative;
+      aspect-ratio: 4 / 5;
+      overflow: hidden;
+      background: linear-gradient(135deg, #ffd9cb, #ef9b80 54%, #cf6f83 100%);
+    }
+
+    .real-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .real-photo-card:hover .real-photo img {
+      transform: scale(1.06);
+    }
+
+    .real-badge {
+      position: absolute;
+      left: 12px;
+      bottom: 12px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(255,247,240,0.92);
+      color: #8f4254;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      border: 1px solid rgba(181,92,114,0.12);
+      box-shadow: 0 8px 18px rgba(181,92,114,0.12);
+    }
+
+    .comment-box {
+      padding: 14px 16px;
+      border-radius: 18px;
+      background: linear-gradient(180deg, rgba(246,240,236,0.9), rgba(255,255,255,0.92));
+      border: 1px solid rgba(143,93,82,0.10);
+    }
+
+    .comment-box strong {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--primary);
+      font-size: 0.86rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .comment-box span {
+      display: block;
+      color: #5c4743;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.95rem;
+    }
+
+    .reviews {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .review {
+      position: relative;
+      padding: 26px;
+      border-radius: 24px;
+      background: var(--surface-strong);
+      border: 1px solid var(--line);
+      box-shadow: 0 16px 34px rgba(70,38,30,0.06);
+    }
+
+    .review::before {
+      content: "“";
+      position: absolute;
+      right: 18px;
+      top: 2px;
+      font-size: 4.4rem;
+      line-height: 1;
+      color: rgba(143,93,82,0.10);
+    }
+
+    .stars {
+      margin-bottom: 12px;
+      color: var(--gold);
+      font-size: 1.05rem;
+      letter-spacing: 0.12em;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .review p {
+      margin: 0;
+      color: #5c4743;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.98rem;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .details {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 14px;
+    }
+
+    .details li {
+      padding: 18px;
+      background: rgba(255,255,255,0.74);
+      border-radius: 18px;
+      border: 1px solid var(--line);
+    }
+
+    .details strong {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--text);
+      font-size: 1rem;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .details a, .details span {
+      color: var(--muted);
+      font-family: Arial, Helvetica, sans-serif;
+      word-break: break-word;
+    }
+
+    .social-proof {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .social-proof .glass strong {
+      display: block;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--primary);
+      font-size: 1.3rem;
+      margin-bottom: 4px;
+    }
+
+    .cta {
+      padding: 18px 0 74px;
+    }
+
+    .cta-box {
+      border-radius: 34px;
+      overflow: hidden;
+      background:
+        linear-gradient(135deg, rgba(137,55,79,0.98), rgba(181,92,114,0.94) 52%, rgba(224,139,114,0.90));
+      color: #fff8f3;
+      box-shadow: 0 30px 70px rgba(143,66,84,0.22);
+      display: grid;
+      grid-template-columns: 1.1fr auto;
+      gap: 24px;
+      align-items: center;
+      padding: 34px;
+      position: relative;
+    }
+
+    .cta-box::before {
+      content: "";
+      position: absolute;
+      inset: auto -30px -40px auto;
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .cta-box h2 {
+      margin: 0 0 10px;
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      line-height: 1.02;
+    }
+
+    .cta-box p {
+      margin: 0;
+      color: rgba(255,248,243,0.82);
+      font-family: Arial, Helvetica, sans-serif;
+      max-width: 58ch;
+    }
+
+    .cta-box .btn-secondary {
+      background: #fff7f2;
+      color: #71493f;
+      border-color: transparent;
+    }
+
+    footer {
+      padding: 0 0 38px;
+    }
+
+    .footer {
+      border-top: 1px solid rgba(95,57,45,0.10);
+      padding-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      color: var(--muted);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 1020px) {
+      .hero-grid,
+      .about-grid,
+      .contact-grid,
+      .cta-box,
+      .grid-3,
+      .services,
+      .gallery-grid,
+      .instagram-box,
+      .instagram-grid,
+      .real-photo-grid,
+      .reviews {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .cta-box {
+        align-items: start;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .gallery-filters {
+        gap: 8px;
+      }
+      .filter-btn {
+        padding: 9px 14px;
+        font-size: 0.8rem;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .nav {
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        padding: 14px 0;
+      }
+
+      .brand {
+        margin: 0;
+      }
+
+      .menu {
+        position: static;
+        top: auto;
+        right: auto;
+        transform: none;
+        justify-content: center;
+        width: 100%;
+      }
+
+      .hero-grid,
+      .about-grid,
+      .contact-grid,
+      .cta-box,
+      .grid-3,
+      .services,
+      .gallery-grid,
+      .instagram-box,
+      .instagram-grid,
+      .real-photo-grid,
+      .reviews,
+      .hero-stats,
+      .social-proof {
+        grid-template-columns: 1fr;
+      }
+
+      .brand-logo {
+        height: 48px;
+      }
+
+      .gallery-photo.multi {
+        height: auto;
+      }
+
+      .ambient-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .ambient-grid img {
+        min-height: 220px;
+      }
+
+      .hero-shell {
+        border-radius: 28px;
+      }
+
+      .hero-grid {
+        padding: 28px;
+      }
+
+      .hero-card {
+        min-height: auto;
+      }
+
+      .cta-box {
+        padding: 26px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container nav">
+      <a class="brand" href="#inicio" aria-label="Casa Spa Beauty">
+        <img class="brand-logo" src="images/logo-casa-spa-beauty.svg" alt="Logo Casa Spa Beauty" />
+      </a>
+
+      <nav class="menu" aria-label="Menu principal">
+        <a class="btn btn-primary" href="https://wa.me/5567991729477" target="_blank" rel="noopener noreferrer">
+          <svg class="social-icon wa-icon" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+            <path d="M20.52 3.48A11.82 11.82 0 0 0 12.08 0C5.57 0 .3 5.27.3 11.78c0 2.08.54 4.11 1.58 5.9L0 24l6.5-1.7a11.73 11.73 0 0 0 5.58 1.42h.01c6.5 0 11.78-5.27 11.78-11.78 0-3.15-1.23-6.1-3.35-8.46ZM12.09 21.7h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.21-3.86 1.01 1.03-3.76-.24-.39a9.9 9.9 0 0 1-1.52-5.2c0-5.47 4.45-9.92 9.93-9.92 2.65 0 5.13 1.03 6.99 2.9a9.84 9.84 0 0 1 2.91 7c0 5.47-4.45 9.92-9.93 9.92Zm5.44-7.41c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.5-.89-.79-1.49-1.77-1.67-2.07-.17-.3-.02-.46.13-.61.14-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.48-.5-.67-.5h-.57c-.2 0-.52.07-.8.37-.27.3-1.05 1.02-1.05 2.5 0 1.47 1.07 2.9 1.22 3.1.15.2 2.1 3.2 5.09 4.49.71.31 1.27.5 1.7.64.71.22 1.36.19 1.87.11.57-.09 1.77-.72 2.02-1.41.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35Z"/>
+          </svg>
+          Agendar horário
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="container hero-shell">
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <div class="eyebrow">Três Lagoas - MS • Atendimento com agendamento</div>
+            <h1>Um espaço de beleza com presença, elegância e cuidado.</h1>
+            <p>
+              A <strong>Casa Spa Beauty - Tatiana Ribeiro</strong> une sofisticação, acolhimento e excelência para oferecer uma experiência especial em <strong>Três Lagoas - MS</strong>.
+            </p>
+            <p>
+              Um lugar onde salão, relaxamento e moda se encontram para transformar o seu momento em algo memorável — sempre valorizando a sua singularidade.
+            </p>
+
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="https://wa.me/5567991729477" target="_blank" rel="noopener noreferrer">
+                <svg class="social-icon wa-icon" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+                  <path d="M20.52 3.48A11.82 11.82 0 0 0 12.08 0C5.57 0 .3 5.27.3 11.78c0 2.08.54 4.11 1.58 5.9L0 24l6.5-1.7a11.73 11.73 0 0 0 5.58 1.42h.01c6.5 0 11.78-5.27 11.78-11.78 0-3.15-1.23-6.1-3.35-8.46ZM12.09 21.7h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.21-3.86 1.01 1.03-3.76-.24-.39a9.9 9.9 0 0 1-1.52-5.2c0-5.47 4.45-9.92 9.93-9.92 2.65 0 5.13 1.03 6.99 2.9a9.84 9.84 0 0 1 2.91 7c0 5.47-4.45 9.92-9.93 9.92Zm5.44-7.41c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.5-.89-.79-1.49-1.77-1.67-2.07-.17-.3-.02-.46.13-.61.14-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.48-.5-.67-.5h-.57c-.2 0-.52.07-.8.37-.27.3-1.05 1.02-1.05 2.5 0 1.47 1.07 2.9 1.22 3.1.15.2 2.1 3.2 5.09 4.49.71.31 1.27.5 1.7.64.71.22 1.36.19 1.87.11.57-.09 1.77-.72 2.02-1.41.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35Z"/>
+                </svg>
+                Falar no WhatsApp
+              </a>
+            </div>
+
+            <div class="hero-stats">
+              <div class="stat">
+                <strong>Beleza</strong>
+                <span>maquiagem e produções especiais</span>
+              </div>
+              <div class="stat">
+                <strong>Cabelo</strong>
+                <span>corte, escova e penteados</span>
+              </div>
+              <div class="stat">
+                <strong>Contato</strong>
+                <span>agendamento fácil pelo WhatsApp</span>
+              </div>
+            </div>
+          </div>
+
+          <aside class="hero-card" aria-label="Destaque premium da marca">
+            <div>
+              <div class="mini-label">Casa Spa Beauty</div>
+              <h2>A beleza na sua singularidade.</h2>
+              <div class="luxury-line"></div>
+              <p>
+                Produções para o dia a dia e para ocasiões especiais, com atenção aos detalhes, acabamento refinado e atendimento acolhedor.
+              </p>
+            </div>
+
+            <ul class="feature-list">
+              <li>Ambiente agradável, elegante e aconchegante</li>
+              <li>Atendimento com foco na sua essência e estilo</li>
+              <li>Maquiagem, cabelo, penteados e produção completa</li>
+              <li>Agendamento prático pelo WhatsApp</li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section id="sobre">
+      <div class="container">
+        <div class="section-head">
+          <span class="tag">Sobre a experiência</span>
+          <h2>Mais do que um atendimento: um momento pensado para você se sentir linda, segura e bem cuidada.</h2>
+          <p>
+            Cada detalhe da Casa Spa Beauty foi pensado para oferecer uma experiência premium, com estética refinada, ambiente acolhedor e atenção genuína em cada etapa do atendimento.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <div class="signature-box">
+            <div class="tagline">assinatura da marca</div>
+            <h3>Beleza com identidade, presença e excelência.</h3>
+            <p>
+              Um conceito que une feminilidade, bem-estar e sofisticação para valorizar sua imagem com naturalidade e elegância.
+            </p>
+            <div class="quote">
+              “Um lugar onde salão, relaxamento e moda se encontram para transformar seu dia.”
+            </div>
+          </div>
+
+          <div class="grid-3">
+            <article class="glass">
+              <h3>Atendimento acolhedor</h3>
+              <p>Clientes destacam o ambiente agradável, o cuidado no atendimento e a sensação de conforto durante toda a experiência.</p>
+            </article>
+            <article class="glass">
+              <h3>Resultado com excelência</h3>
+              <p>Produções pensadas para valorizar traços, estilo pessoal e ocasião, com acabamento refinado e olhar profissional.</p>
+            </article>
+            <article class="glass">
+              <h3>Experiência personalizada</h3>
+              <p>Cada atendimento é pensado com cuidado para valorizar sua imagem, seu momento e sua personalidade.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="servicos">
+      <div class="container">
+        <div class="section-head">
+          <span class="tag">Serviços</span>
+          <h2>Cuidados e produções para realçar sua beleza com sofisticação.</h2>
+          <p>
+            Serviços pensados para quem busca qualidade, elegância e um atendimento especial, seja para a rotina ou para ocasiões marcantes.
+          </p>
+        </div>
+
+        <div class="services">
+          <article class="service">
+            <div class="icon">✂</div>
+            <h3>Corte de cabelo</h3>
+            <p>Renovação de visual com estilo, harmonia e acabamento alinhado à sua personalidade.</p>
+          </article>
+          <article class="service">
+            <div class="icon">◌</div>
+            <h3>Escova</h3>
+            <p>Finalização elegante para valorizar brilho, movimento e caimento dos fios.</p>
+          </article>
+          <article class="service">
+            <div class="icon">✦</div>
+            <h3>Maquiagem</h3>
+            <p>Produções sofisticadas para eventos, celebrações e momentos que merecem destaque.</p>
+          </article>
+          <article class="service">
+            <div class="icon">❋</div>
+            <h3>Penteados</h3>
+            <p>Composições elegantes e personalizadas para festas, cerimônias e ensaios especiais.</p>
+          </article>
+          <article class="service">
+            <div class="icon">★</div>
+            <h3>Salão de beleza VIP</h3>
+            <p>Uma proposta diferenciada para quem valoriza exclusividade e experiência premium.</p>
+          </article>
+          <article class="service">
+            <div class="icon">☽</div>
+            <h3>Serviços de maquiagem</h3>
+            <p>Acabamento profissional com elegância, presença e durabilidade.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="galeria">
+      <div class="container">
+        <div class="section-head">
+          <span class="tag">Galeria real</span>
+          <h2>Galeria composta somente por fotos reais da Casa Spa Beauty.</h2>
+          <p>
+            Aqui estão reunidas apenas imagens reais do ambiente, das maquiagens, dos penteados e dos resultados do salão.
+          </p>
+        </div>
+
+        <!-- Botões de filtro -->
+        <div class="gallery-filters" role="group" aria-label="Filtrar galeria por categoria">
+          <button class="filter-btn active" data-filter="todos" aria-pressed="true">
+            <span class="filter-dot dot-todos"></span>
+            Todos
+          </button>
+          <button class="filter-btn" data-filter="ambiente" aria-pressed="false">
+            <span class="filter-dot dot-ambiente"></span>
+            Ambiente Premium
+          </button>
+          <button class="filter-btn" data-filter="make" aria-pressed="false">
+            <span class="filter-dot dot-make"></span>
+            Make Profissional
+          </button>
+          <button class="filter-btn" data-filter="penteados" aria-pressed="false">
+            <span class="filter-dot dot-penteados"></span>
+            Penteados
+          </button>
+          <button class="filter-btn" data-filter="resultado" aria-pressed="false">
+            <span class="filter-dot dot-resultado"></span>
+            Resultados
+          </button>
+        </div>
+
+        <div class="real-photo-grid" id="galeriaGrid">
+          <article class="real-photo-card" data-categoria="ambiente">
+            <div class="real-photo">
+              <img src="images/ambiente-premium/ambiente-1.webp" alt="Foto real do ambiente premium da Casa Spa Beauty" />
+              <div class="real-badge">Ambiente Premium</div>
+            </div>
+          </article>
+          <article class="real-photo-card" data-categoria="ambiente">
+            <div class="real-photo">
+              <img src="images/ambiente-premium/ambiente-2.webp" alt="Foto real do espaço interno da Casa Spa Beauty" />
+              <div class="real-badge">Ambiente Premium</div>
+            </div>
+          </article>
+          <article class="real-photo-card" data-categoria="ambiente">
+            <div class="real-photo">
+              <img src="images/ambiente-premium/ambiente-3.webp" alt="Foto real do ambiente do salão Casa Spa Beauty" />
+              <div class="real-badge">Ambiente Premium</div>
+            </div>
+          </article>
+
+          <article class="real-photo-card" data-categoria="make">
+            <div class="real-photo">
+              <img src="images/make-profissional/make-1.webp" alt="Foto real de maquiagem profissional na Casa Spa Beauty" />
+              <div class="real-badge">Make Profissional</div>
+            </div>
+          </article>
+          <article class="real-photo-card" data-categoria="make">
+            <div class="real-photo">
+              <img src="images/make-profissional/make-2.webp" alt="Foto real de produção de maquiagem no salão Casa Spa Beauty" />
+              <div class="real-badge">Make Profissional</div>
+            </div>
+          </article>
+          <article class="real-photo-card" data-categoria="make">
+            <div class="real-photo">
+              <img src="images/make-profissional/make-3.webp" alt="Foto real de make profissional da Casa Spa Beauty" />
+              <div class="real-badge">Make Profissional</div>
+            </div>
+          </article>
+
+          <article class="real-photo-card" data-categoria="penteados">
+            <div class="real-photo">
+              <img src="images/penteados/penteado-1.webp" alt="Foto real de penteado da Casa Spa Beauty" />
+              <div class="real-badge">Penteados</div>
+            </div>
+          </article>
+
+          <article class="real-photo-card" data-categoria="resultado">
+            <div class="real-photo">
+              <img src="images/resultado/resultado-1.webp" alt="Foto real de resultado de cabelo na Casa Spa Beauty" />
+              <div class="real-badge">Resultados</div>
+            </div>
+          </article>
+          <article class="real-photo-card" data-categoria="resultado">
+            <div class="real-photo">
+              <img src="images/resultado/resultado-2.webp" alt="Foto real de transformação e resultado no salão Casa Spa Beauty" />
+              <div class="real-badge">Resultados</div>
+            </div>
+          </article>
+          <article class="real-photo-card" data-categoria="resultado">
+            <div class="real-photo">
+              <img src="images/resultado/resultado-3.webp" alt="Foto real de resultado de beleza da Casa Spa Beauty" />
+              <div class="real-badge">Resultados</div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="instagram">
+      <div class="container">
+        <div class="section-head">
+          <span class="tag">Instagram</span>
+          <h2>Fotos e vídeos reais da marca reunidos em um perfil cheio de inspiração.</h2>
+          <p>
+            Como o Instagram bloqueia a captura automática da mídia aqui no site, criei uma seção especial para levar suas clientes diretamente ao perfil oficial, onde elas podem ver fotos, vídeos, reels e novidades da Casa Spa Beauty.
+          </p>
+        </div>
+
+        <div class="instagram-box">
+          <div class="instagram-feature">
+            <h3>Acompanhe o perfil oficial da Casa Spa Beauty.</h3>
+            <p>Veja conteúdos reais de maquiagem, cabelo, penteados, bastidores, produções especiais e novidades publicadas no Instagram.</p>
+            <p>Perfil: <strong style="font-family: Arial, Helvetica, sans-serif;">@casaspabeauty.tatianaribeiro</strong></p>
+            <a class="btn btn-secondary" href="https://www.instagram.com/casaspabeauty.tatianaribeiro/" target="_blank" rel="noopener noreferrer" aria-label="Abrir Instagram Casa Spa Beauty" style="margin-top: 8px; background: rgba(255,255,255,0.94); color: #8f4254;">
+              <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+                <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5a4.25 4.25 0 0 0 4.25 4.25h8.5a4.25 4.25 0 0 0 4.25-4.25v-8.5a4.25 4.25 0 0 0-4.25-4.25h-8.5Zm8.9 1.85a.9.9 0 1 1 0 1.8.9.9 0 0 1 0-1.8ZM12 6.8A5.2 5.2 0 1 1 6.8 12 5.2 5.2 0 0 1 12 6.8Zm0 1.5A3.7 3.7 0 1 0 15.7 12 3.7 3.7 0 0 0 12 8.3Z"/>
+              </svg>
+              Ver perfil no Instagram
+            </a>
+          </div>
+
+          <div class="instagram-grid">
+            <div class="instagram-item"><strong>Maquiagens</strong><span>Produções elegantes para eventos e momentos especiais.</span></div>
+            <div class="instagram-item"><strong>Penteados</strong><span>Inspirações sofisticadas e acabamentos personalizados.</span></div>
+            <div class="instagram-item"><strong>Escovas</strong><span>Finalizações com brilho, movimento e presença.</span></div>
+            <div class="instagram-item"><strong>Cortes</strong><span>Transformações com estilo e harmonia.</span></div>
+            <div class="instagram-item"><strong>Reels</strong><span>Vídeos rápidos com resultados e bastidores.</span></div>
+            <div class="instagram-item"><strong>Bastidores</strong><span>Momentos reais do atendimento e da rotina da marca.</span></div>
+            <div class="instagram-item"><strong>Antes e depois</strong><span>Conteúdos visuais que destacam a transformação.</span></div>
+            <div class="instagram-item"><strong>Novidades</strong><span>Lançamentos, tendências e atualizações do espaço.</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato">
+      <div class="container">
+        <div class="section-head">
+          <span class="tag">Contato</span>
+          <h2>Agende sua experiência Casa Spa Beauty.</h2>
+          <p>
+            Fale diretamente pelo WhatsApp, confira disponibilidade e reserve seu horário para atendimento em Três Lagoas.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <div></div>
+
+          <div>
+            <div class="hero-actions" style="margin-top: 0; margin-bottom: 10px;">
+              <a class="btn btn-primary" href="https://wa.me/5567991729477" target="_blank" rel="noopener noreferrer" aria-label="Agendar pelo WhatsApp">
+                <svg class="social-icon wa-icon" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+                  <path d="M20.52 3.48A11.82 11.82 0 0 0 12.08 0C5.57 0 .3 5.27.3 11.78c0 2.08.54 4.11 1.58 5.9L0 24l6.5-1.7a11.73 11.73 0 0 0 5.58 1.42h.01c6.5 0 11.78-5.27 11.78-11.78 0-3.15-1.23-6.1-3.35-8.46ZM12.09 21.7h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.21-3.86 1.01 1.03-3.76-.24-.39a9.9 9.9 0 0 1-1.52-5.2c0-5.47 4.45-9.92 9.93-9.92 2.65 0 5.13 1.03 6.99 2.9a9.84 9.84 0 0 1 2.91 7c0 5.47-4.45 9.92-9.93 9.92Zm5.44-7.41c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.5-.89-.79-1.49-1.77-1.67-2.07-.17-.3-.02-.46.13-.61.14-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.48-.5-.67-.5h-.57c-.2 0-.52.07-.8.37-.27.3-1.05 1.02-1.05 2.5 0 1.47 1.07 2.9 1.22 3.1.15.2 2.1 3.2 5.09 4.49.71.31 1.27.5 1.7.64.71.22 1.36.19 1.87.11.57-.09 1.77-.72 2.02-1.41.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35Z"/>
+                </svg>
+                Agendar pelo WhatsApp
+              </a>
+            </div>
+            <div class="social-buttons" style="margin-top: 0;">
+              <a class="btn btn-secondary social-btn" href="https://www.instagram.com/casaspabeauty.tatianaribeiro/" target="_blank" rel="noopener noreferrer" aria-label="Instagram Casa Spa Beauty">
+                <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+                  <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5a4.25 4.25 0 0 0 4.25 4.25h8.5a4.25 4.25 0 0 0 4.25-4.25v-8.5a4.25 4.25 0 0 0-4.25-4.25h-8.5Zm8.9 1.85a.9.9 0 1 1 0 1.8.9.9 0 0 1 0-1.8ZM12 6.8A5.2 5.2 0 1 1 6.8 12 5.2 5.2 0 0 1 12 6.8Zm0 1.5A3.7 3.7 0 1 0 15.7 12 3.7 3.7 0 0 0 12 8.3Z"/>
+                </svg>
+                Instagram
+              </a>
+              <a class="btn btn-secondary social-btn" href="https://www.facebook.com/tattianabeauty/" target="_blank" rel="noopener noreferrer" aria-label="Facebook Casa Spa Beauty">
+                <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+                  <path d="M13.5 22v-8.2h2.76l.41-3.2H13.5V8.56c0-.93.26-1.56 1.59-1.56h1.7V4.14c-.29-.04-1.28-.14-2.43-.14-2.41 0-4.06 1.47-4.06 4.17v2.33H7.57v3.2h2.73V22h3.2Z"/>
+                </svg>
+                Facebook
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container">
+        <div class="cta-box">
+          <div>
+            <h2>Seu próximo momento de beleza começa aqui.</h2>
+            <p>
+              Agende seu horário e viva uma experiência com sofisticação, cuidado e resultados que valorizam a sua essência.
+            </p>
+          </div>
+          <a class="btn btn-secondary" href="https://wa.me/5567991729477" target="_blank" rel="noopener noreferrer">
+            <svg class="social-icon wa-icon" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+              <path d="M20.52 3.48A11.82 11.82 0 0 0 12.08 0C5.57 0 .3 5.27.3 11.78c0 2.08.54 4.11 1.58 5.9L0 24l6.5-1.7a11.73 11.73 0 0 0 5.58 1.42h.01c6.5 0 11.78-5.27 11.78-11.78 0-3.15-1.23-6.1-3.35-8.46ZM12.09 21.7h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.21-3.86 1.01 1.03-3.76-.24-.39a9.9 9.9 0 0 1-1.52-5.2c0-5.47 4.45-9.92 9.93-9.92 2.65 0 5.13 1.03 6.99 2.9a9.84 9.84 0 0 1 2.91 7c0 5.47-4.45 9.92-9.93 9.92Zm5.44-7.41c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.5-.89-.79-1.49-1.77-1.67-2.07-.17-.3-.02-.46.13-.61.14-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.48-.5-.67-.5h-.57c-.2 0-.52.07-.8.37-.27.3-1.05 1.02-1.05 2.5 0 1.47 1.07 2.9 1.22 3.1.15.2 2.1 3.2 5.09 4.49.71.31 1.27.5 1.7.64.71.22 1.36.19 1.87.11.57-.09 1.77-.72 2.02-1.41.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35Z"/>
+            </svg>
+            Quero agendar
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer">
+      <div>© <span id="year"></span> Casa Spa Beauty - Tatiana Ribeiro.</div>
+      <div>Maquiadora e Cabeleireira em Três Lagoas - MS.</div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // ── Filtro da galeria ──
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const cards      = document.querySelectorAll('#galeriaGrid .real-photo-card');
+    const grid       = document.getElementById('galeriaGrid');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const filtro = btn.dataset.filter;
+
+        // Atualiza botões
+        filterBtns.forEach(b => {
+          b.classList.remove('active');
+          b.setAttribute('aria-pressed', 'false');
+        });
+        btn.classList.add('active');
+        btn.setAttribute('aria-pressed', 'true');
+
+        // Filtra os cards
+        let visiveis = 0;
+        cards.forEach(card => {
+          const cat = card.dataset.categoria;
+          const mostrar = filtro === 'todos' || cat === filtro;
+
+          if (mostrar) {
+            card.style.display = '';
+            // Pequeno delay para animar entrada
+            requestAnimationFrame(() => {
+              card.style.opacity = '0';
+              card.style.transform = 'scale(0.94)';
+              setTimeout(() => {
+                card.style.opacity = '';
+                card.style.transform = '';
+              }, 30 + visiveis * 40);
+            });
+            visiveis++;
+          } else {
+            card.style.opacity = '0';
+            card.style.transform = 'scale(0.94)';
+            setTimeout(() => { card.style.display = 'none'; }, 320);
+          }
+        });
+      });
+    });
+  </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a057e206af06a67d',t:'MTc4MDQxODI0OA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/v833ccba57c9e4d2798f2e76cebdd09a11778172276447" integrity="sha512-57MDmcccJXYtNnH+ZiBwzC4jb2rvgVCEokYN+L/nLlmO8rfYT/gIpW2A569iJ/3b+0UEasghjuZH/ma3wIs/EQ==" data-cf-beacon='{"version":"2024.11.0","token":"1954b47c125f43f8b4338b3c4f804e4f","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>
