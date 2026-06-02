@@ -1,0 +1,47 @@
+<svg width="1400" height="520" viewBox="0 0 1400 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="roseGold" x1="80" y1="60" x2="420" y2="420" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F4C7B2"/>
+      <stop offset="0.48" stop-color="#CF7387"/>
+      <stop offset="1" stop-color="#8D445A"/>
+    </linearGradient>
+    <linearGradient id="goldSoft" x1="160" y1="110" x2="360" y2="320" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F3D9A6"/>
+      <stop offset="1" stop-color="#C8923D"/>
+    </linearGradient>
+    <linearGradient id="lineGlow" x1="210" y1="120" x2="310" y2="305" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF0DE"/>
+      <stop offset="1" stop-color="#F2C98D"/>
+    </linearGradient>
+    <filter id="shadow" x="40" y="38" width="420" height="424" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="20" stdDeviation="22" flood-color="#A24E67" flood-opacity="0.22"/>
+    </filter>
+  </defs>
+
+  <rect width="1400" height="520" rx="36" fill="#FFF8FA"/>
+
+  <g filter="url(#shadow)">
+    <rect x="80" y="78" width="340" height="344" rx="56" fill="url(#roseGold)"/>
+    <rect x="98" y="96" width="304" height="308" rx="42" stroke="rgba(255,255,255,0.35)" stroke-width="2"/>
+
+    <circle cx="250" cy="192" r="78" fill="rgba(255,255,255,0.10)" stroke="rgba(255,255,255,0.18)" stroke-width="2"/>
+
+    <path d="M250 134C236 149 231 163 231 177C231 193 239 206 250 214C261 206 269 193 269 177C269 163 264 149 250 134Z" stroke="url(#lineGlow)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M206 160C196 172 193 185 195 198C197 212 205 223 217 229C225 218 229 206 227 193C225 180 219 169 206 160Z" stroke="url(#lineGlow)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M294 160C304 172 307 185 305 198C303 212 295 223 283 229C275 218 271 206 273 193C275 180 281 169 294 160Z" stroke="url(#lineGlow)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M250 160V255" stroke="url(#goldSoft)" stroke-width="6" stroke-linecap="round"/>
+    <path d="M223 257C231 250 239 246 250 246C261 246 269 250 277 257" stroke="url(#goldSoft)" stroke-width="5" stroke-linecap="round"/>
+
+    <text x="250" y="330" text-anchor="middle" fill="#FFF5F0" font-family="Georgia, 'Times New Roman', serif" font-size="54" font-weight="700" letter-spacing="0.20em">CS</text>
+  </g>
+
+  <g transform="translate(500 120)">
+    <text x="0" y="52" fill="#8D445A" font-family="Georgia, 'Times New Roman', serif" font-size="72" font-weight="700" letter-spacing="0.08em">CASA SPA BEAUTY</text>
+    <text x="2" y="102" fill="#C8923D" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" letter-spacing="0.38em">TATIANA RIBEIRO</text>
+
+    <line x1="0" y1="140" x2="620" y2="140" stroke="#E8C8B2" stroke-width="2"/>
+
+    <text x="0" y="190" fill="#705355" font-family="Arial, Helvetica, sans-serif" font-size="28" letter-spacing="0.06em">MAQUIADORA • CABELEIREIRA • TRÊS LAGOAS - MS</text>
+    <text x="0" y="246" fill="#A05C30" font-family="Georgia, 'Times New Roman', serif" font-size="34" font-style="italic">A beleza na sua singularidade</text>
+  </g>
+</svg>
